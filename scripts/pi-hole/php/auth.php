@@ -11,7 +11,7 @@ $ERRORLOG = getenv('PHP_ERROR_LOG');
 if (empty($ERRORLOG)) {
     $ERRORLOG = '/var/log/lighttpd/error.log';
 }
-$regexfile = "/etc/pihole/regex.list";
+$regexfile = "/var/lib/pihole-system/etc/pihole/regex.list";
 
 function pi_log($message) {
     error_log(date('Y-m-d H:i:s') . ': ' . $message . "\n", 3, $GLOBALS['ERRORLOG']);
@@ -23,7 +23,7 @@ function log_and_die($message) {
 }
 
 function check_cors() {
-    $setupVars = parse_ini_file("/etc/pihole/setupVars.conf");
+    $setupVars = parse_ini_file("/var/lib/pihole-system/etc/pihole/setupVars.conf");
     $ipv4 = isset($setupVars["IPV4_ADDRESS"]) ? explode("/", $setupVars["IPV4_ADDRESS"])[0] : $_SERVER['SERVER_ADDR'];
     $ipv6 = isset($setupVars["IPV6_ADDRESS"]) ? explode("/", $setupVars["IPV6_ADDRESS"])[0] : $_SERVER['SERVER_ADDR'];
 

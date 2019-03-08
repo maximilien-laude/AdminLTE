@@ -12,7 +12,7 @@ if(!isset($_GET['list']))
 
 $listtype = $_GET['list'];
 
-$basedir = "/etc/pihole/";
+$basedir = "/var/lib/pihole-system/etc/pihole/";
 
 require_once "func.php";
 

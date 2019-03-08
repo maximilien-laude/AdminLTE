@@ -8,7 +8,7 @@
 require "scripts/pi-hole/php/header.php";
 require "scripts/pi-hole/php/savesettings.php";
 // Reread ini file as things might have been changed
-$setupVars = parse_ini_file("/etc/pihole/setupVars.conf");
+$setupVars = parse_ini_file("/var/lib/pihole-system/etc/pihole/setupVars.conf");
 if(is_readable($piholeFTLConfFile))
 {
 	$piholeFTLConf = parse_ini_file($piholeFTLConfFile);
@@ -503,7 +503,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                             if ($DHCP) {
                                 // Read leases file
                                 $leasesfile = true;
-                                $dhcpleases = @fopen('/etc/pihole/dhcp.leases', 'r');
+                                $dhcpleases = @fopen('/var/lib/pihole-system/etc/pihole/dhcp.leases', 'r');
                                 if (!is_resource($dhcpleases))
                                     $leasesfile = false;
 

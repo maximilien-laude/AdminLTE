@@ -1,8 +1,8 @@
 <?php
 
-$localversions = "/etc/pihole/localversions";
-$localbranches = "/etc/pihole/localbranches";
-$GitHubVersions = "/etc/pihole/GitHubVersions";
+$localversions = "/var/lib/pihole-system/etc/pihole/localversions";
+$localbranches = "/var/lib/pihole-system/etc/pihole/localbranches";
+$GitHubVersions = "/var/lib/pihole-system/etc/pihole/GitHubVersions";
 
 if(!is_readable($localversions) || !is_readable($localbranches) || !is_readable($GitHubVersions))
 {

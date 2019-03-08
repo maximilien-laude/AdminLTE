@@ -142,7 +142,7 @@ function readAdlists()
 {
 	// Reset list
 	$list = [];
-	$handle = @fopen("/etc/pihole/adlists.list", "r");
+	$handle = @fopen("/var/lib/pihole-system/etc/pihole/adlists.list", "r");
 	if ($handle)
 	{
 		while (($line = fgets($handle)) !== false)

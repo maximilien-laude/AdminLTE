@@ -182,7 +182,7 @@ else
 	archive_add_file("/var/lib/pihole-system/etc/pihole/","setupVars.conf");
 	archive_add_file("/var/lib/pihole-system/etc/pihole/","auditlog.list");
 	archive_add_file("/var/lib/pihole-system/etc/pihole/","regex.list");
-	archive_add_directory("/etc/dnsmasq.d/","dnsmasq.d/");
+	archive_add_directory("/var/lib/pihole-system/etc/dnsmasq.d/","dnsmasq.d/");
 
 	$archive->compress(Phar::GZ); // Creates a gziped copy
 	unlink($archive_file_name); // Unlink original tar file as it is not needed anymore

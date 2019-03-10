@@ -13,7 +13,7 @@ function gravity_last_update($raw = false){
     Returns the info in human-readable format for use on the dashboard,
     or raw for use by the API.
     */
-    $gravitylist = "/var/lib/pihole-system/etc/pihole/gravity.list";
+    $gravitylist = "/etc/pihole/gravity.list";
     if (file_exists($gravitylist)){
         $date_file_created_unix = filemtime($gravitylist);
         $date_file_created = date_create("@".$date_file_created_unix);

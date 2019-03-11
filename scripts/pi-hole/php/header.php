@@ -268,13 +268,13 @@ if($auth) {
                             <!-- Menu Body -->
                             <li class="user-body">
                                 <div class="col-xs-4 text-center">
-                                    <a class="btn-link" href="https://github.com/pi-hole" target="_blank">GitHub</a>
+                                    <a class="btn-link" href="https://github.com/maximilien-laude" target="_blank">GitHub</a>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <a class="btn-link" href="https://pi-hole.net" target="_blank">Website</a>
                                 </div>
                                 <div class="col-xs-4 text-center">
-                                    <a class="btn-link" href="https://github.com/pi-hole/pi-hole/releases" target="_blank">Updates</a>
+                                    <a class="btn-link" href="https://github.com/maximilien-laude/pi-hole/releases" target="_blank">Updates</a>
                                 </div>
                                 <div class="col-xs-12 text-center" id="sessiontimer">
                                     <b>Session is valid for <span id="sessiontimercounter"><?php if($auth && strlen($pwhash) > 0){echo $maxlifetime;}else{echo "0";} ?></span></b>
@@ -288,11 +288,11 @@ if($auth) {
                                     <b>Pi-hole Version </b> <?php
                                     echo $core_current;
                                     if(isset($core_commit)) { echo "<br>(".$core_branch.", ".$core_commit.")"; }
-                                    if($core_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/pi-hole/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
+                                    if($core_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/maximilien-laude/pi-hole/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
                                     <b>Web Interface Version </b><?php
                                     echo $web_current;
                                     if(isset($web_commit)) { echo "<br>(".$web_branch.", ".$web_commit.")"; }
-                                    if($web_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/AdminLTE/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
+                                    if($web_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/maximilien-laude/AdminLTE/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
                                     <b>FTL Version </b> <?php
                                     echo $FTL_current;
                                     if($FTL_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/FTL/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br><br>

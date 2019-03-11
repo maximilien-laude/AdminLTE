@@ -52,11 +52,11 @@
             <b>Pi-hole Version </b> <?php
             echo $core_current;
             if(isset($core_commit)) { echo " (".$core_branch.", ".$core_commit.")"; }
-            if($core_update){ ?> <a class="alert-link lookatme" href="https://github.com/pi-hole/pi-hole/releases" target="_blank">(Update available!)</a><?php } ?>
+            if($core_update){ ?> <a class="alert-link lookatme" href="https://github.com/maximilien-laude/pi-hole/releases" target="_blank">(Update available!)</a><?php } ?>
             <b>Web Interface Version </b><?php
             echo $web_current;
             if(isset($web_commit)) { echo " (".$web_branch.", ".$web_commit.")"; }
-            if($web_update){ ?> <a class="alert-link lookatme" href="https://github.com/pi-hole/AdminLTE/releases" target="_blank">(Update available!)</a><?php } ?>
+            if($web_update){ ?> <a class="alert-link lookatme" href="https://github.com/maximilien-laude/AdminLTE/releases" target="_blank">(Update available!)</a><?php } ?>
             <b>FTL Version </b> <?php
             echo $FTL_current;
             if(isset($FTL_commit)) { echo " (".$FTL_branch.", ".$FTL_commit.")"; }
